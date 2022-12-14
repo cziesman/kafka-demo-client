@@ -5,7 +5,7 @@ spec:
       containers:
         - env:
             - name: JAVA_OPTIONS
-              value: '-Dspring.profiles.active=dev'
+              value: '-Dspring.profiles.active=ocp'
           volumeMounts:
             - name: certs
               mountPath: /tmp/certs
