@@ -1,0 +1,12 @@
+kafka:
+  bootstrap-servers: my-cluster-kafka-bootstrap.kafka:9093
+
+spring:
+  kafka:
+    bootstrap-servers: my-cluster-kafka-bootstrap.kafka:9093
+    properties:
+      ssl:
+        truststore:
+          location: /tmp/certs/truststore.p12
+        keystore:
+          location: /tmp/certs/keystore.p12

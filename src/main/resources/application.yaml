@@ -1,0 +1,22 @@
+kafka:
+  bootstrap-servers: my-cluster-kafka-bootstrap-kafka.apps.cluster-lb1614.lb1614.sandbox2566.opentlc.com:443
+  topic:
+    name: foobar
+  consumer:
+    group-id: foobar
+
+spring:
+  kafka:
+    bootstrap-servers: my-cluster-kafka-bootstrap-kafka.apps.cluster-lb1614.lb1614.sandbox2566.opentlc.com:443
+    properties:
+      ssl:
+        truststore:
+          location: src/main/resources/certs/truststore.p12
+          password: tfuUntr984a6
+          type: PKCS12
+        keystore:
+          location: src/main/resources/certs/keystore.p12
+          password: Ttst6PC0aJqU
+          type: PKCS12
+      security:
+        protocol: SSL

@@ -1,0 +1,20 @@
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - env:
+            - name: JAVA_OPTIONS
+              value: '-Dspring.profiles.active=dev'
+          volumeMounts:
+            - name: certs
+              mountPath: /tmp/certs
+      volumes:
+        - name: certs
+          secret:
+            secretName: kafka-client-secret
+            items:
+              - key: truststore.p12
+                path: truststore.p12
+              - key: keystore.p12
+                path: keystore.p12
