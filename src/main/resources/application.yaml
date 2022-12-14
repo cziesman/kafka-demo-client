@@ -1,9 +1,9 @@
 kafka:
   bootstrap-servers: my-cluster-kafka-bootstrap-kafka.apps.cluster-lb1614.lb1614.sandbox2566.opentlc.com:443
   topic:
-    name: foobar
+    name: my-topic
   consumer:
-    group-id: foobar
+    group-id: my-group-id
 
 spring:
   kafka:
